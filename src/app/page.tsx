@@ -34,7 +34,7 @@ const EMBEDDINGS_APP_URL = "https://embeddings-app.vercel.app/";
 const TOKENIZATSIYA_URL = "https://tokenizatsiya-app.vercel.app/";
 const ML_S_NULA_URL = "https://ml-s-nula.vercel.app/";
 const LLM_APP_URL = "https://llms-app.vercel.app/";
-const ALIGNMENT_URL = "https://alignment-app.vercel.app/";
+const ALIGNMENT_URL = "https://alignment-safety.vercel.app/";
 
 function Hero() {
   const { completedCount, totalCount, hydrated, resetAll } = useProgress();
