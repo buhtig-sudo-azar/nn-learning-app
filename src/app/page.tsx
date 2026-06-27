@@ -34,6 +34,7 @@ const EMBEDDINGS_APP_URL = "https://embeddings-app.vercel.app/";
 const TOKENIZATSIYA_URL = "https://tokenizatsiya-app.vercel.app/";
 const ML_S_NULA_URL = "https://ml-s-nula.vercel.app/";
 const LLM_APP_URL = "https://llms-app.vercel.app/";
+const ALIGNMENT_URL = "https://alignment-app.vercel.app/";
 
 function Hero() {
   const { completedCount, totalCount, hydrated, resetAll } = useProgress();
@@ -66,22 +67,15 @@ function Hero() {
               <ArrowLeft className="h-3.5 w-3.5" />
               Назад к курсу «Трансформеры — архитектура целиком»
             </a>
-            <Badge
-              variant="outline"
-              className="mb-3 bg-rose-50 border-rose-200 text-rose-700 dark:bg-rose-950/50 dark:border-rose-800/60 dark:text-rose-300"
-            >
-              <Sparkles className="h-3 w-3 mr-1" />
-              Продолжение: после архитектуры
-            </Badge>
             <a
               href={LLM_APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex"
+              className="inline-flex mb-3"
             >
               <Badge
                 variant="outline"
-                className="mb-3 ml-2 bg-blue-50 border-blue-300 text-blue-700 hover:bg-blue-100 dark:bg-blue-950/50 dark:border-blue-700 dark:text-blue-300 transition-colors"
+                className="bg-blue-50 border-blue-300 text-blue-700 hover:bg-blue-100 dark:bg-blue-950/50 dark:border-blue-700 dark:text-blue-300 transition-colors"
               >
                 <Sparkles className="h-3 w-3 mr-1" />
                 Продолжение: большие языковые модели →
@@ -249,43 +243,14 @@ function SiteFooter() {
         <p className="text-xs mt-3 max-w-3xl">
           Все песочницы работают прямо в браузере на чистом React + TypeScript.
           Прогресс сохраняется локально в localStorage — твои ответы и метки
-          не уходят на сервер. Это приложение — продолжение серии из четырёх
-          курсов:{" "}
-          <a
-            href={ML_S_NULA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-rose-700 dark:hover:text-rose-300"
-          >
-            «ML с нуля»
-          </a>
-          {", "}
-          <a
-            href={TOKENIZATSIYA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-rose-700 dark:hover:text-rose-300"
-          >
-            «Токенизация»
-          </a>
-          {", "}
-          <a
-            href={EMBEDDINGS_APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-rose-700 dark:hover:text-rose-300"
-          >
-            «Эмбеддинги и attention»
-          </a>
-          {" и "}
-          <a
-            href={TRANSFORMERS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-rose-700 dark:hover:text-rose-300"
-          >
-            «Трансформеры»
-          </a>
+          не уходят на сервер. Это приложение — пятый курс в серии из семи:{" "}
+          <a href={ML_S_NULA_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-700 dark:hover:text-rose-300">«ML с нуля»</a>
+          {" → "}<a href={TOKENIZATSIYA_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-700 dark:hover:text-rose-300">«Токенизация»</a>
+          {" → "}<a href={EMBEDDINGS_APP_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-700 dark:hover:text-rose-300">«Эмбеддинги и attention»</a>
+          {" → "}<a href={TRANSFORMERS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-700 dark:hover:text-rose-300">«Трансформеры»</a>
+          {" → "}<strong className="text-foreground">«Как нейросети учатся»</strong>
+          {" → "}<a href={LLM_APP_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-700 dark:hover:text-rose-300">«Большие языковые модели»</a>
+          {" → "}<a href={ALIGNMENT_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-700 dark:hover:text-rose-300">«Адаптация и alignment»</a>
           .
         </p>
 
